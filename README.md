@@ -5,16 +5,16 @@
 
 ## Requirements
 
-- [] Each list item should consist of the character's name, gender, hair color, mass, and height.
-- [] The list should be styled in a way that makes each entry distinct.
-- [] The list should be searchable by the character's name.
-- [] The list should have pages (the maximum amount of entries on a page should be 10).
-- [] The displayed list should be displayed alphabetically.
-- [] Below the list, display the average height and average mass of the characters in your list (calculate this using the reduce method).
+- [ ] Each list item should consist of the character's name, gender, hair color, mass, and height.
+- [ ] The list should be styled in a way that makes each entry distinct.
+- [ ] The list should be searchable by the character's name.
+- [ ] The list should have pages (the maximum amount of entries on a page should be 10).
+- [ ] The displayed list should be displayed alphabetically.
+- [ ] Below the list, display the average height and average mass of the characters in your list (calculate this using the reduce method).
 
-## Day 1 11/8/2021
+## Day 1: 11/8/2021
 
 - Started project/planning on Miro
 - Installed Create-React-App, cleaned up unwanted boiler plate
-- Changed Favicon
+- Changed Favicon to Yoda
 - Updated Readme with requirements
