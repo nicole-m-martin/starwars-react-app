@@ -5,7 +5,7 @@
 
 ## Requirements
 
-- [ ] Each list item should consist of the character's name, gender, hair color, mass, and height.
+- [ x ] Each list item should consist of the character's name, gender, hair color, mass, and height.
 - [ ] The list should be styled in a way that makes each entry distinct.
 - [ ] The list should be searchable by the character's name.
 - [ ] The list should have pages (the maximum amount of entries on a page should be 10).
