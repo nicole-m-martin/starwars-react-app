@@ -12,7 +12,7 @@
 - [ ] The displayed list should be displayed alphabetically.
 - [ ] Below the list, display the average height and average mass of the characters in your list (calculate this using the reduce method).
 
-## Day 1: 11/8/2021
+### Day 1: 11/8/2021
 
 - Started project/planning on Miro
 - Installed Create-React-App, cleaned up unwanted boiler plate
