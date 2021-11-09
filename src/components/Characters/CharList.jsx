@@ -1,8 +1,11 @@
 import React from 'react';
 import Spinner from '../UI/Spinner';
 import CharItem from './CharItem';
+import { useChars } from '../../hooks/charHooks';
 
-const CharList = ({ loading, chars }) => {
+const CharList = () => {
+  const { loading, chars } = useChars();
+
   if (loading) {
     return <Spinner />;
   } else {

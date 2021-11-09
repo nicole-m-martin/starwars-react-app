@@ -1,7 +1,7 @@
 export const getAllChars = async () => {
   const response = await fetch('https://swapi.dev/api/people/');
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
 
   return data.results.map((char) => ({
     name: char.name,
