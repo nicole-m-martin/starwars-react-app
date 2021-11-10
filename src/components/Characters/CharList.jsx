@@ -20,10 +20,14 @@ const CharList = ({ chars }) => {
     return average + mass / array.length;
   }, 0);
 
+  const orderedCharacters = chars.sort(
+    (charA, charB) => charA.name < charB.name
+  );
+
   return (
     <>
       <ul>
-        {chars.map((char) => (
+        {orderedCharacters.map((char) => (
           <li key={char.name}>
             <CharItem
               name={char.name}

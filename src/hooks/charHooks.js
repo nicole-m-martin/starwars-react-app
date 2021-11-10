@@ -11,5 +11,5 @@ export const useChars = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  return { loading, chars };
+  return { loading, chars, setChars };
 };
