@@ -1,5 +1,5 @@
-export const getAllChars = async () => {
-  const response = await fetch('https://swapi.dev/api/people/');
+export const getAllChars = async (pages) => {
+  const response = await fetch(`https://swapi.dev/api/people/?page${pages}`);
   const data = await response.json();
   console.log(data);
 

@@ -10,7 +10,7 @@
 - [ ] The list should be searchable by the character's name.
 - [ ] The list should have pages (the maximum amount of entries on a page should be 10).
 - [ ] The displayed list should be displayed alphabetically.
-- [ ] Below the list, display the average height and average mass of the characters in your list (calculate this using the reduce method).
+- [x] Below the list, display the average height and average mass of the characters in your list (calculate this using the reduce method).
 
 ### Day 1: 11/8/2021
 
