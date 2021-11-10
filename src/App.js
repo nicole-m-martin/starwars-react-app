@@ -1,5 +1,4 @@
 import './App.css';
-import SearchBar from './components/Search/SearchBar';
 
 // import Home from './pages/Home';
 import StarWarsContainer from './containers/StarWarsContainer';
