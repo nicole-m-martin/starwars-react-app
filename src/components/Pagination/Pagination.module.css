@@ -1,0 +1,26 @@
+.btn {
+  display: inline-block;
+  color: black;
+  background-color: yellow;
+  font-size: 1em;
+  text-align: center;
+  padding: 10px 15px;
+  border: 0;
+  margin: 10px 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 10px #cbd1d6;
+}
+
+.btn:hover {
+  color: white;
+  background-color: black;
+  border: 1px yellow;
+}
+
+.btn:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #999494;
+  color: #383535;
+}
