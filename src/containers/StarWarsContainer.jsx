@@ -31,11 +31,9 @@ const StarWarsContainer = () => {
     getAllChars(pageNumber)
       .then((chars) => setChars(chars))
       .finally(() => setLoading(false));
-    // console.log('clicked!');
   }
 
   function previousPage() {
-    console.log(pageNumber);
     setPageNumber(pageNumber - 1);
   }
 

@@ -26,7 +26,7 @@ const PgButtons = ({ pageNumber, previousPage, nextPage, chars }) => {
 export default PgButtons;
 
 PgButtons.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  onClick: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
+  onClick: PropTypes.func,
+  onSubmit: PropTypes.func,
 };

@@ -24,7 +24,7 @@ const SearchBar = ({ onClear, searchTerm, onSearchChange, onSubmit }) => {
 export default SearchBar;
 
 SearchBar.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  onClick: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
+  onClick: PropTypes.func,
+  onSubmit: PropTypes.func,
 };

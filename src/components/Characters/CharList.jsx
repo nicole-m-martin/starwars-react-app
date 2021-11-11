@@ -54,9 +54,9 @@ const CharList = ({ chars }) => {
 export default CharList;
 
 CharList.propTypes = {
-  name: PropTypes.isRequired,
-  gender: PropTypes.isRequired,
-  hair: PropTypes.isRequired,
-  mass: PropTypes.isRequired,
-  height: PropTypes.isRequired,
+  name: PropTypes.string,
+  gender: PropTypes.string,
+  hair: PropTypes.string,
+  mass: PropTypes.string,
+  height: PropTypes.string,
 };

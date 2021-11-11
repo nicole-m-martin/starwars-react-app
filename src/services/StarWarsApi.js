@@ -26,6 +26,6 @@ export const searchAllChars = async (query) => {
     height: char.height,
   }));
 
-  console.log(searchResults);
+  // console.log(searchResults);
   return searchResults;
 };
