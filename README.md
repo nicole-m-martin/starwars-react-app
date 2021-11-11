@@ -8,7 +8,7 @@
 - [x] Each list item should consist of the character's name, gender, hair color, mass, and height.
 - [ ] The list should be styled in a way that makes each entry distinct.
 - [x] The list should be searchable by the character's name.
-- [ ] The list should have pages (the maximum amount of entries on a page should be 10).
+- [x] The list should have pages (the maximum amount of entries on a page should be 10).
 - [ ] The displayed list should be displayed alphabetically.
 - [x] Below the list, display the average height and average mass of the characters in your list (calculate this using the reduce method).
 
@@ -24,3 +24,9 @@
 - Started Coding
 - List of Chars rendering on page
 - Create custom useChars hook!
+
+### Day 3: 11/10/2021
+
+- Pagination function
+- Calculate Mass/Weight
+- Search Bar function
