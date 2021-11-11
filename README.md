@@ -3,7 +3,7 @@
 - React application that allows you to search through a list of characters/people in the Star Wars Universe
 - Using the [Star Wars Api](https://swapi.dev/documentation)
 
-## Requirements
+## Features!!!
 
 - [x] Each list item should consist of the character's name, gender, hair color, mass, and height.
 - [x] The list should be styled in a way that makes each entry distinct.
