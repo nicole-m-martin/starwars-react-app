@@ -10,7 +10,7 @@
   background-color: yellow;
   font-size: 1em;
   text-align: center;
-  padding: 10px 15px;
+  padding: 8px 15px;
   border: 0;
   margin: 10px 10px;
   border-radius: 5px;
@@ -28,4 +28,9 @@ input:focus {
   outline: none !important;
   border: 1px solid yellow;
   box-shadow: 0 0 10px #cbd1d6;
+}
+
+input[type='text'],
+textarea {
+  background-color: black;
 }

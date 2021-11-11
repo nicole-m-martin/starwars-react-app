@@ -6,7 +6,7 @@
 ## Requirements
 
 - [x] Each list item should consist of the character's name, gender, hair color, mass, and height.
-- [ ] The list should be styled in a way that makes each entry distinct.
+- [x] The list should be styled in a way that makes each entry distinct.
 - [x] The list should be searchable by the character's name.
 - [x] The list should have pages (the maximum amount of entries on a page should be 10).
 - [ ] The displayed list should be displayed alphabetically.
@@ -30,3 +30,4 @@
 - Pagination function
 - Calculate Mass/Weight
 - Search Bar function
+- Styling!
