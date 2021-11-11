@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './Pagination.module.css';
+import PropTypes from 'prop-types';
 
 const PgButtons = ({ pageNumber, previousPage, nextPage, chars }) => {
   return (
@@ -23,3 +24,9 @@ const PgButtons = ({ pageNumber, previousPage, nextPage, chars }) => {
 };
 
 export default PgButtons;
+
+PgButtons.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};
