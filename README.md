@@ -12,6 +12,8 @@
 - [ ] List is displayed alphabetically.
 - [x] Below the list, displayed the average height and average mass of the characters.
 
+<img width="1018" alt="Screen Shot 2021-11-11 at 10 01 20 AM" src="https://user-images.githubusercontent.com/71411431/141347119-deb07afc-29ca-4119-87c6-4a11cba718f2.png">
+
 ### Day 1: 11/8/2021
 
 - Started project/planning on Miro
