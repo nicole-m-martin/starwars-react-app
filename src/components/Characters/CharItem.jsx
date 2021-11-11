@@ -1,9 +1,10 @@
 import React from 'react';
+import style from '../Characters/Characters.module.css';
 
 const CharItem = ({ name, gender, hair, mass, height }) => {
   return (
-    <div>
-      <h1>Name: {name}</h1>
+    <div className={style.charCard}>
+      <h1>{name}</h1>
       <p>Gender: {gender}</p>
       <p>Hair Color: {hair}</p>
       <p>Mass: {mass}</p>

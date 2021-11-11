@@ -1,13 +1,11 @@
 import './App.css';
-
-// import Home from './pages/Home';
 import StarWarsContainer from './containers/StarWarsContainer';
+import Header from './components/UI/Header';
 
 function App() {
   return (
     <div className="App">
-      <h1>Star Wars Universe</h1>
-
+      <Header />
       <StarWarsContainer />
     </div>
   );

@@ -1,0 +1,34 @@
+.charCard,
+.ave {
+  border: solid 2px yellow;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 0 0 10px #cbd1d6;
+}
+
+main,
+.ave {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.spanDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  padding: 20px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import CharItem from './CharItem';
+import style from '../Characters/Characters.module.css';
 
 const CharList = ({ chars }) => {
   // Calculate the average Height using reduce!
@@ -26,21 +27,25 @@ const CharList = ({ chars }) => {
 
   return (
     <>
-      <ul>
-        {orderedCharacters.map((char) => (
-          <li key={char.name}>
-            <CharItem
-              name={char.name}
-              gender={char.gender}
-              hair={char.hair}
-              mass={char.mass}
-              height={char.height}
-            />
-          </li>
-        ))}
-      </ul>
-      <span>Average Height: {averageHeight} </span>
-      <span>Average Mass: {averageMass} </span>
+      <section className={style.charCardGrid}>
+        <ul>
+          {orderedCharacters.map((char) => (
+            <li style={{ listStyle: 'none' }} key={char.name}>
+              <CharItem
+                name={char.name}
+                gender={char.gender}
+                hair={char.hair}
+                mass={char.mass}
+                height={char.height}
+              />
+            </li>
+          ))}
+        </ul>
+        <div className={style.spanDiv}>
+          <span className={style.ave}>Average Height: {averageHeight} </span>
+          <span className={style.ave}>Average Mass: {averageMass} </span>
+        </div>
+      </section>
     </>
   );
 };

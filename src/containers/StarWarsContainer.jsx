@@ -5,6 +5,7 @@ import SearchBar from '../components/Search/SearchBar';
 import Spinner from '../components/UI/Spinner';
 import { useChars } from '../hooks/charHooks';
 import { searchAllChars, getAllChars } from '../services/StarWarsApi';
+import stars from '../assets/stars.jpeg';
 
 const StarWarsContainer = () => {
   const { loading, setLoading, chars, setChars, pageNumber, setPageNumber } =
@@ -30,7 +31,7 @@ const StarWarsContainer = () => {
     getAllChars(pageNumber)
       .then((chars) => setChars(chars))
       .finally(() => setLoading(false));
-    console.log('clicked!');
+    // console.log('clicked!');
   }
 
   function previousPage() {
@@ -44,7 +45,7 @@ const StarWarsContainer = () => {
 
   if (loading) return <Spinner />;
   return (
-    <main>
+    <main style={{ backgroundImage: `url(${stars})` }}>
       <SearchBar
         onSearchChange={onSearchChange}
         searchTerm={searchTerm}

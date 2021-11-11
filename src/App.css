@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 5;
+  padding: 5;
+}
+
+html,
+body {
+  background-color: black;
+  background-image: url('https://unsplash.com/photos/qVotvbsuM_c') no-repeat
+    center center/cover;
+  height: 100vh;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto;
+}
