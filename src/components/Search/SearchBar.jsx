@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../Search/Search.module.css';
-
+import PropTypes from 'prop-types';
 const SearchBar = ({ onClear, searchTerm, onSearchChange, onSubmit }) => {
   return (
     <>
@@ -22,3 +22,9 @@ const SearchBar = ({ onClear, searchTerm, onSearchChange, onSubmit }) => {
 };
 
 export default SearchBar;
+
+SearchBar.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};

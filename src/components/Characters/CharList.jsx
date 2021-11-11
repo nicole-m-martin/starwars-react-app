@@ -1,6 +1,7 @@
 import React from 'react';
 import CharItem from './CharItem';
 import style from '../Characters/Characters.module.css';
+import PropTypes from 'prop-types';
 
 const CharList = ({ chars }) => {
   // Calculate the average Height using reduce!
@@ -51,3 +52,11 @@ const CharList = ({ chars }) => {
 };
 
 export default CharList;
+
+CharList.propTypes = {
+  name: PropTypes.isRequired,
+  gender: PropTypes.isRequired,
+  hair: PropTypes.isRequired,
+  mass: PropTypes.isRequired,
+  height: PropTypes.isRequired,
+};
