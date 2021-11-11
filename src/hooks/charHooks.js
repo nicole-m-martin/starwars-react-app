@@ -4,12 +4,14 @@ import { getAllChars } from '../services/StarWarsApi';
 export const useChars = () => {
   const [loading, setLoading] = useState(true);
   const [chars, setChars] = useState([]);
+  const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
-    getAllChars()
+    setLoading(true);
+    getAllChars(pageNumber)
       .then((chars) => setChars(chars))
       .finally(() => setLoading(false));
-  }, []);
+  }, [pageNumber]);
 
-  return { loading, chars, setChars };
+  return { loading, setLoading, chars, setChars, pageNumber, setPageNumber };
 };

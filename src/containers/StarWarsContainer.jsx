@@ -4,10 +4,11 @@ import PgButtons from '../components/Pagination/PgButtons';
 import SearchBar from '../components/Search/SearchBar';
 import Spinner from '../components/UI/Spinner';
 import { useChars } from '../hooks/charHooks';
-import { searchAllChars } from '../services/StarWarsApi';
+import { searchAllChars, getAllChars } from '../services/StarWarsApi';
 
 const StarWarsContainer = () => {
-  const { loading, chars, setChars } = useChars();
+  const { loading, setLoading, chars, setChars, pageNumber, setPageNumber } =
+    useChars();
 
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -17,8 +18,28 @@ const StarWarsContainer = () => {
 
   async function onSubmit(e) {
     e.preventDefault();
+    setPageNumber(1);
     const searchedChars = await searchAllChars(searchTerm);
     setChars(searchedChars);
+  }
+
+  function onClear() {
+    setSearchTerm('');
+    setPageNumber(1);
+    setLoading(true);
+    getAllChars(pageNumber)
+      .then((chars) => setChars(chars))
+      .finally(() => setLoading(false));
+    console.log('clicked!');
+  }
+
+  function previousPage() {
+    console.log(pageNumber);
+    setPageNumber(pageNumber - 1);
+  }
+
+  function nextPage() {
+    setPageNumber(pageNumber + 1);
   }
 
   if (loading) return <Spinner />;
@@ -28,8 +49,14 @@ const StarWarsContainer = () => {
         onSearchChange={onSearchChange}
         searchTerm={searchTerm}
         onSubmit={onSubmit}
+        onClear={onClear}
       />
-      <PgButtons />
+      <PgButtons
+        pageNumber={pageNumber}
+        previousPage={previousPage}
+        nextPage={nextPage}
+        chars={chars}
+      />
       <CharList chars={chars} loading={loading} />
     </main>
   );

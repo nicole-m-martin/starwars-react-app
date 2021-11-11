@@ -1,5 +1,7 @@
-export const getAllChars = async () => {
-  const response = await fetch(`https://swapi.dev/api/people/`);
+export const getAllChars = async (pageNumber) => {
+  const response = await fetch(
+    `https://swapi.dev/api/people/?page=${pageNumber}`
+  );
   const data = await response.json();
   // console.log(data);
 
@@ -24,6 +26,6 @@ export const searchAllChars = async (query) => {
     height: char.height,
   }));
 
-  console.log(searchResults);
+  // console.log(searchResults);
   return searchResults;
 };

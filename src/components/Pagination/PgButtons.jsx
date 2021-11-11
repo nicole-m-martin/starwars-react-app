@@ -1,13 +1,13 @@
 import React from 'react';
 
-const PgButtons = ({ onClick }) => {
+const PgButtons = ({ pageNumber, previousPage, nextPage, chars }) => {
   return (
     <div>
-      <button onClick={onClick} value="left">
-        Left
+      <button disabled={pageNumber === 1} onClick={previousPage} value="left">
+        Previous
       </button>
-      <button onClick={onClick} value="right">
-        Right
+      <button disabled={chars.length < 10} onClick={nextPage} value="right">
+        Next
       </button>
     </div>
   );
