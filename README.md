@@ -1,7 +1,8 @@
 # Star Wars Finder
 
-- React application that allows you to search through a list of characters/people in the Star Wars Universe
+- React Application that allows you to search through a list of characters/people in the Star Wars Universe
 - Using the [Star Wars Api](https://swapi.dev/documentation)
+- Deployed: [Star Wars Finder](https://star-warss-finder.netlify.app/)
 
 ## Features!!!
 
