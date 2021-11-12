@@ -3,7 +3,6 @@ export const getAllChars = async (pageNumber) => {
     `https://swapi.dev/api/people/?page=${pageNumber}`
   );
   const data = await response.json();
-  // console.log(data);
 
   return data.results.map((char) => ({
     name: char.name,
@@ -26,6 +25,7 @@ export const searchAllChars = async (query) => {
     height: char.height,
   }));
 
-  // console.log(searchResults);
   return searchResults;
 };
+
+// Recursive Function to get all chars from api data

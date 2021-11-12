@@ -3,7 +3,7 @@ import CharItem from './CharItem';
 import style from '../Characters/Characters.module.css';
 import PropTypes from 'prop-types';
 
-const CharList = ({ chars }) => {
+const CharList = ({ chars, searchTerm }) => {
   // Calculate the average Height using reduce!
   const charHeight = chars.map((char) => {
     return `${char.height}`;
@@ -22,15 +22,19 @@ const CharList = ({ chars }) => {
     return average + mass / array.length;
   }, 0);
 
-  const orderedCharacters = chars.sort(
-    (charA, charB) => charA.name < charB.name
-  );
+  // Sort order function - Realized this only sorts Characters on each page (1-10), I need to figure out a recursive function to get all data AND then sort characters on whole app.
+  const orderedChars = chars.sort((a, b) => a.name.localeCompare(b.name));
+
+  // Converts all names to lowercase for search
+  const filteredChars = orderedChars.filter((char) => {
+    return char.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
 
   return (
     <>
       <section className={style.charCardGrid}>
         <ul>
-          {orderedCharacters.map((char) => (
+          {filteredChars.map((char) => (
             <li style={{ listStyle: 'none' }} key={char.name}>
               <CharItem
                 name={char.name}
