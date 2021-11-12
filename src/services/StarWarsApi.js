@@ -27,3 +27,5 @@ export const searchAllChars = async (query) => {
 
   return searchResults;
 };
+
+// Recursive Function to get all chars from api data
