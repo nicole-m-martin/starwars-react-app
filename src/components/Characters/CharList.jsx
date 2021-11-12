@@ -22,6 +22,7 @@ const CharList = ({ chars }) => {
     return average + mass / array.length;
   }, 0);
 
+  // Sort order function
   const orderedCharacters = chars.sort(
     (charA, charB) => charA.name < charB.name
   );
