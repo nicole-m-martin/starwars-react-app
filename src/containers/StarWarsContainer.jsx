@@ -56,7 +56,7 @@ const StarWarsContainer = () => {
         nextPage={nextPage}
         chars={chars}
       />
-      <CharList chars={chars} loading={loading} searchTerm={searchTerm} />
+      <CharList chars={chars} loading={loading} />
     </main>
   );
 };

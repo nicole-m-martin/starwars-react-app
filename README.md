@@ -9,7 +9,8 @@
 - [x] List is styled in a way that makes each entry distinct.
 - [x] List is searchable by the character's name.
 - [x] List has pages (the maximum amount of entries on a page is 10).
-- [ ] List is displayed alphabetically.
+- [ ] List is displayed alphabetically. (on each page, not in total app)
+  - Almost got there, still need to understand recursive functions.
 - [x] Below the list, displayed the average height and average mass of the characters.
 
 ### Day 1: 11/8/2021

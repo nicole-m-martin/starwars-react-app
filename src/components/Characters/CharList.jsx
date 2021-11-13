@@ -26,15 +26,16 @@ const CharList = ({ chars, searchTerm }) => {
   const orderedChars = chars.sort((a, b) => a.name.localeCompare(b.name));
 
   // Converts all names to lowercase for search
-  const filteredChars = orderedChars.filter((char) => {
-    return char.name.toLowerCase().includes(searchTerm.toLowerCase());
-  });
+  // Commented out because it caused my search function t
+  // const filteredChars = orderedChars.filter((char) => {
+  //   return char.name.toLowerCase().includes(searchTerm.toLowerCase());
+  // });
 
   return (
     <>
       <section className={style.charCardGrid}>
         <ul>
-          {filteredChars.map((char) => (
+          {orderedChars.map((char) => (
             <li style={{ listStyle: 'none' }} key={char.name}>
               <CharItem
                 name={char.name}
