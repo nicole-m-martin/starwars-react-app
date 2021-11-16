@@ -15,5 +15,12 @@ export const useChars = () => {
       .finally(() => setLoading(false));
   }, [pageNumber]);
 
-  return { loading, setLoading, chars, setChars, pageNumber, setPageNumber };
+  return {
+    loading,
+    setLoading,
+    chars,
+    setChars,
+    pageNumber,
+    setPageNumber,
+  };
 };

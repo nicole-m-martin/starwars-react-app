@@ -3,7 +3,7 @@ import CharItem from './CharItem';
 import style from '../Characters/Characters.module.css';
 import PropTypes from 'prop-types';
 
-const CharList = ({ chars, searchTerm }) => {
+const CharList = ({ chars }) => {
   // Calculate the average Height using reduce!
   const charHeight = chars.map((char) => {
     return `${char.height}`;
@@ -35,14 +35,14 @@ const CharList = ({ chars, searchTerm }) => {
     <>
       <section className={style.charCardGrid}>
         <ul>
-          {orderedChars.map((char) => (
-            <li style={{ listStyle: 'none' }} key={char.name}>
+          {orderedChars.map(({ name, gender, hair, mass, height }) => (
+            <li style={{ listStyle: 'none' }} key={name}>
               <CharItem
-                name={char.name}
-                gender={char.gender}
-                hair={char.hair}
-                mass={char.mass}
-                height={char.height}
+                name={name}
+                gender={gender}
+                hair={hair}
+                mass={mass}
+                height={height}
               />
             </li>
           ))}

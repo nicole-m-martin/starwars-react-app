@@ -6,7 +6,6 @@ import { searchAllChars } from '../services/StarWarsApi';
 export const useSearchChar = () => {
   const [loading, setLoading] = useState(true);
   const [chars, setChars] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
   const [query, setQuery] = useState('');
 
   useEffect(() => {
@@ -21,8 +20,6 @@ export const useSearchChar = () => {
     setLoading,
     chars,
     setChars,
-    searchTerm,
-    setSearchTerm,
     query,
     setQuery,
   };
