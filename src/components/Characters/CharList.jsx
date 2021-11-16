@@ -5,31 +5,35 @@ import PropTypes from 'prop-types';
 
 const CharList = ({ chars }) => {
   // Calculate the average Height using reduce!
-  const charHeight = chars.map((char) => {
-    return `${char.height}`;
-  });
+  let charHeight = chars
+    .filter(function (char) {
+      return char.height !== 'unknown';
+    })
+    .map(function (char) {
+      return char.height;
+    });
 
   const averageHeight = charHeight.reduce((average, height, index, array) => {
-    return average + height / array.length;
+    return Math.ceil(average + height / array.length);
   }, 0);
 
   // Calculate the average Mass using reduce!
-  const charMass = chars.map((char) => {
-    return `${char.mass}`;
-  });
+  let charMass = chars
+    .filter(function (char) {
+      return char.mass !== 'unknown';
+    })
+    .map(function (char) {
+      return char.mass;
+    });
+  console.log('mass', charMass);
 
   const averageMass = charMass.reduce((average, mass, index, array) => {
-    return average + mass / array.length;
+    return Math.ceil(average + mass / array.length);
   }, 0);
+  console.log(averageMass);
 
   // Sort order function - Realized this only sorts Characters on each page (1-10), I need to figure out a recursive function to get all data AND then sort characters on whole app.
   const orderedChars = chars.sort((a, b) => a.name.localeCompare(b.name));
-
-  // Converts all names to lowercase for search
-  // Commented out because it caused my search function t
-  // const filteredChars = orderedChars.filter((char) => {
-  //   return char.name.toLowerCase().includes(searchTerm.toLowerCase());
-  // });
 
   return (
     <>

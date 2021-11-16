@@ -55,6 +55,7 @@ const StarWarsContainer = () => {
         onClear={onClear}
         query={query}
       />
+
       <PgButtons
         pageNumber={pageNumber}
         previousPage={previousPage}

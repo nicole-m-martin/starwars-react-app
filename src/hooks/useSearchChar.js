@@ -12,7 +12,8 @@ export const useSearchChar = () => {
     setLoading(true);
     searchAllChars(query)
       .then((chars) => setChars(chars))
-      .finally(() => setLoading(false));
+      .finally(() => setLoading(false))
+      .catch((error) => console.log('Error fetching from SWAPI: ', error));
   }, [query]);
 
   return {

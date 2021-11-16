@@ -12,7 +12,8 @@ export const useChars = () => {
     setLoading(true);
     getAllChars(pageNumber)
       .then((chars) => setChars(chars))
-      .finally(() => setLoading(false));
+      .finally(() => setLoading(false))
+      .catch((error) => console.log('Error fetching from SWAPI: ', error));
   }, [pageNumber]);
 
   return {
