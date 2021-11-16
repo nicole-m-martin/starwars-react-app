@@ -25,12 +25,10 @@ const CharList = ({ chars }) => {
     .map(function (char) {
       return char.mass;
     });
-  console.log('mass', charMass);
 
   const averageMass = charMass.reduce((average, mass, index, array) => {
     return Math.ceil(average + mass / array.length);
   }, 0);
-  console.log(averageMass);
 
   // Sort order function - Realized this only sorts Characters on each page (1-10), I need to figure out a recursive function to get all data AND then sort characters on whole app.
   const orderedChars = chars.sort((a, b) => a.name.localeCompare(b.name));
