@@ -23,7 +23,6 @@ const StarWarsContainer = () => {
 
   async function onSubmit(e) {
     e.preventDefault();
-    setPageNumber(1);
     const searchedChars = await searchAllChars(searchTerm);
     setChars(searchedChars);
   }
