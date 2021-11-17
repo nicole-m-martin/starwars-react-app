@@ -4,10 +4,10 @@ import Header from './components/UI/Header';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
       <StarWarsContainer />
-    </div>
+    </>
   );
 }
 

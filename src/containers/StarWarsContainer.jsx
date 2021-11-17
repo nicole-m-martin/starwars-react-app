@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import CharList from '../components/Characters/CharList';
 import PgButtons from '../components/Pagination/PgButtons';
-import SearchBar from '../components/Search/SearchBar';
 import Spinner from '../components/UI/Spinner';
-import { useChars } from '../hooks/charHooks';
-import { searchAllChars, getAllChars } from '../services/StarWarsApi';
+import SearchBar from '../components/Search/SearchBar';
+import { useChars } from '../hooks/useChars';
+import { useSearchChar } from '../hooks/useSearchChar';
+import { searchAllChars } from '../services/StarWarsApi';
+import { getAllChars } from '../services/StarWarsApi';
 import stars from '../assets/stars.jpeg';
 
 const StarWarsContainer = () => {
   const { loading, setLoading, chars, setChars, pageNumber, setPageNumber } =
     useChars();
+
+  const { query } = useSearchChar();
 
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -19,7 +23,6 @@ const StarWarsContainer = () => {
 
   async function onSubmit(e) {
     e.preventDefault();
-    setPageNumber(1);
     const searchedChars = await searchAllChars(searchTerm);
     setChars(searchedChars);
   }
@@ -49,14 +52,17 @@ const StarWarsContainer = () => {
         searchTerm={searchTerm}
         onSubmit={onSubmit}
         onClear={onClear}
+        query={query}
       />
+
       <PgButtons
         pageNumber={pageNumber}
         previousPage={previousPage}
         nextPage={nextPage}
         chars={chars}
       />
-      <CharList chars={chars} loading={loading} searchTerm={searchTerm} />
+
+      <CharList chars={chars} loading={loading} />
     </main>
   );
 };

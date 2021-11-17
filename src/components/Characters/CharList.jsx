@@ -3,45 +3,48 @@ import CharItem from './CharItem';
 import style from '../Characters/Characters.module.css';
 import PropTypes from 'prop-types';
 
-const CharList = ({ chars, searchTerm }) => {
+const CharList = ({ chars }) => {
   // Calculate the average Height using reduce!
-  const charHeight = chars.map((char) => {
-    return `${char.height}`;
-  });
+  let charHeight = chars
+    .filter(function (char) {
+      return char.height !== 'unknown';
+    })
+    .map(function (char) {
+      return char.height;
+    });
 
   const averageHeight = charHeight.reduce((average, height, index, array) => {
-    return average + height / array.length;
+    return Math.ceil(average + height / array.length);
   }, 0);
 
   // Calculate the average Mass using reduce!
-  const charMass = chars.map((char) => {
-    return `${char.mass}`;
-  });
+  let charMass = chars
+    .filter(function (char) {
+      return char.mass !== 'unknown';
+    })
+    .map(function (char) {
+      return char.mass;
+    });
 
   const averageMass = charMass.reduce((average, mass, index, array) => {
-    return average + mass / array.length;
+    return Math.ceil(average + mass / array.length);
   }, 0);
 
   // Sort order function - Realized this only sorts Characters on each page (1-10), I need to figure out a recursive function to get all data AND then sort characters on whole app.
   const orderedChars = chars.sort((a, b) => a.name.localeCompare(b.name));
 
-  // Converts all names to lowercase for search
-  const filteredChars = orderedChars.filter((char) => {
-    return char.name.toLowerCase().includes(searchTerm.toLowerCase());
-  });
-
   return (
     <>
       <section className={style.charCardGrid}>
         <ul>
-          {filteredChars.map((char) => (
-            <li style={{ listStyle: 'none' }} key={char.name}>
+          {orderedChars.map(({ name, gender, hair, mass, height }) => (
+            <li style={{ listStyle: 'none' }} key={name}>
               <CharItem
-                name={char.name}
-                gender={char.gender}
-                hair={char.hair}
-                mass={char.mass}
-                height={char.height}
+                name={name}
+                gender={gender}
+                hair={hair}
+                mass={mass}
+                height={height}
               />
             </li>
           ))}
